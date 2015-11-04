@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #div3{background-color: #463DD4;
+        width: 300px;
+        height: 300px;}
+        #div2{background-color:lime;
+            width: 50px;
+            height: 50px;}
+        #div1{background-color:yellow;
+            width: 100px;
+            height: 100px;}
+    </style>
+</head>
+<body>
+<div id="div3">
+    <div id="div1">
+        <div id="div2">
+            <p id="p1">this is </p>
+            <p id="p2">all ur</p>
+            <p id="p3">adad</p>
+            <p id="p4">asdasd</p>
+        </div>
+
+    </div>
+</div>
+<button id="btn">change</button>
+<button id="btn1">change</button>
+<script src="../jquery-1.11.3.js"></script>
+<script>
+
+    $("#btn").on("click",changP);
+    $("#btn1").on("click",xxx);
+    function changP()
+    {
+
+        $("#p1").parent().css("background-color","red");
+        console.log($("#p1").parent()[0]);
+
+    }
+
+    function xxx()
+    {
+
+        $("#p1").parentsUntil("#div3").css("background-color","lightgray");
+
+    }
+
+
+
+</script>
+</body>
+</html>

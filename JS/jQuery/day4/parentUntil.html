@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div>
+        <li>this is frist li
+            <p> this is p fist tag
+                <span>this is span tag</span>
+            </p>
+
+            <p>this is second p tag
+                <span>this is second span tag</span>
+            </p>
+            <div id="div1">this is 2 div</div>
+            <li>this is 2 li sibling<li>
+        </li>
+    </div>
+
+    <button id="btn1">parent</button>
+    <button id="btn2">parents</button>
+    <button id="btn3">parentoUnitl</button>
+    <button id="btn4">children</button>
+    <button id="btn5">find all children</button>
+    <button id="btn6">for siblings</button>
+    <button id="btn7">specical siblings</button>
+    <button id="btn8">the pre</button>
+    <button id="btn9">prevUntil</button>
+    <button id="btn10">nextvUntil</button>
+<script src="../jquery-1.11.3.js"></script>
+<script>
+    // 未做完
+        $("#btn1").hover(
+         hin,a);
+
+        function hin()
+        {
+            $("span").parent().css({
+                "background-color":"yellow",
+                "width":"100px",
+                "height":"100px",});
+
+        }
+    function a()
+    {
+        $("span").parent().css({
+            "background-color":"red",
+            "width":"100px",
+            "height":"100px",});
+    }
+
+</script>
+
+    <script>
+        $("#btn4").hover(children);
+        function children()
+        {
+            $("p").children().css("background-color","blue");
+
+        }
+
+    </script>
+
+<script>
+    //这个是一个find找到所有符合（）内容的set
+    $("#btn5").hover(allChild);
+
+    function allChild()
+    {
+        $("div").find("span").css("background-color","black");
+
+    }
+
+</script>
+
+<script>
+    // this is for siblings
+    $("#btn6").hover(allSibling);
+
+    function allSibling()
+    {
+        //$("p").siblings().css("background-color","#58FAD0");
+        $("p").next().css("background-color","red");
+    }
+</script>
+<script>
+    //this is for splical sibiling when you give a tag name.
+    $("#btn7").hover(specialSibling);
+
+    function specialSibling()
+    {
+        $("p").siblings("div").css("background-color","black");
+
+    }
+</script>
+
+<script>
+    $("#btn8").hover(pre1);
+
+    function pre1()
+    {
+        $("div").prevAll().css("background-color","yellow");
+//        $("div").nextAll().css("background-color","red");
+
+    }
+</script>
+<script>
+    //prutil
+    $("#btn9").hover(preuntilq);
+    function preuntilq()
+    {
+
+        $("li").prevUntil("p").css("background-color","#5F04B4");
+        alert("li preuntil p")
+    }
+
+</script>
+
+
+<script>
+    //nextUntil
+    $("#btn10").hover(nextUntils);
+    function nextUntils()
+    {
+
+        $("p").nextUntil("div").css("background-color","#5F04B4");
+        alert("p next div")
+    }
+</script>
+
+</body>
+</html>

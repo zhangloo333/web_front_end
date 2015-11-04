@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<select id="sb">
+    <option >this is 1</option>
+    <option >this is 2</option>
+    <option >this is 3</option>
+</select>
+<div id="div1">
+    <p class="myclass">par1</p>
+    <p>par2<span>this is sppan inside p</span></p>
+    <p>par3</p>
+    <p>par4</p>
+    <li class="mylist">item1</li>
+    <li><span>this is span inside list item</span></li>
+    <li>item</li>
+</div>
+    <button id="btn1">first for select box</button>
+    <button id="btn2">first for p inside div</button>
+    <button id="btn3">last for p inside div</button>
+    <button id="btn4">#div p : last</button>
+    <button id="btn5">#div p : first</button>
+
+    <button id="btn6">find content of span inside p</button>
+
+    <button id="btn7">specify class in some tag</button>
+
+
+
+<script src="../jquery-1.11.3.js"></script>
+<script>
+    // first for selection
+    $("#btn1").hover(first1);
+
+    function first1()
+    {
+
+        var p = $("#sb").first().val();
+        alert(p);
+    }
+
+</script>
+<script>
+    // first for div
+    $("#btn2").click(finds);
+
+    function finds()
+    {
+
+        var p = $("#div1 p").first().text();
+        alert(p);
+    }
+
+</script>
+<script>
+    // first for div
+    $("#btn3").click(last1);
+
+    function last1()
+    {
+
+        var p = $("#div1 p:first").text();
+        alert(p);
+    }
+
+</script>
+
+<script>
+    // first for div
+    $("#btn4").click(last1);
+
+    function last1()
+    {
+
+        var p = $("#div1 p:last").text();
+        alert(p);
+    }
+
+</script>
+<script>
+    // first for div
+    $("#btn5").click(last1);
+
+    function last1()
+    {
+
+        var p = $("#div1 p:first").text();
+        alert(p);
+    }
+
+</script>
+<script>
+    $("#btn6").click(fcsip);
+    function fcsip()
+    {
+
+        var resul = $("#div1 p span").text();
+        alert(resul);
+    }
+
+</script>
+<script>
+    $("#btn7").click(fcsip);
+    function fcsip()
+    {
+
+        var resul = $("div .mylist").text();
+        alert(resul);
+    }
+
+
+</script>
+</body>
+</html>
