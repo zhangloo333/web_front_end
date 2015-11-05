@@ -12,7 +12,7 @@
 </select>
 <div id="div1">
     <p class="myclass">par1</p>
-    <p>par2<span>this is sppan inside p</span></p>
+    <p>par2<span>this is sppan inside p<a href="http://www.google.com"></span></p>
     <p>par3</p>
     <p>par4</p>
     <li class="mylist">item1</li>
@@ -28,6 +28,14 @@
     <button id="btn6">find content of span inside p</button>
 
     <button id="btn7">specify class in some tag</button>
+
+    <button id="btn8">find the div inside div</button>
+
+    <button id="btn9">find the nth-od child(3)</button>
+
+    <button id="btn10">find the span content</button>
+
+    <button id="btn11">open the span link </button>
 
 
 
@@ -114,5 +122,54 @@
 
 
 </script>
+
+<script>
+    $("#btn8").click(fcsip);
+    function fcsip()
+    {
+
+        var resul = $("div >p").text();
+        var resul = $("div >li").text();
+        alert(resul);
+    }
+
+
+</script>
+
+
+<script>
+    $("#btn9").click(fcsip);
+    function fcsip()
+    {
+
+        var resul = $("div :nth-child(3)").text(); //
+        alert(resul);
+    }
+
+</script>
+
+<script>
+    $("#btn10").click(fcsip);
+    function fcsip()
+    {
+
+        var resul = $("div :nth-child(2) span ").text(); //
+        alert(resul);
+    }
+
+</script>
+
+<script>
+    // click button open the link
+    $("#btn11").click(fcsip);
+    function fcsip()
+    {
+
+        var resul = $("div :nth-child(2) span ").text(); //
+        alert(resul);
+    }
+
+</script>
+
 </body>
 </html>
