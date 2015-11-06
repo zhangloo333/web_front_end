@@ -39,7 +39,7 @@ $("#btn2").click(function()
                  {$("#img1").slideUp(3000, function(){ $("#btn2").hide();}); } );  
 
 $("#btn3").click(function()
-                 {$("#img1").slideDown(3000); } );  
+                 {$("#img1").slideDown(3000,function(){ $("#btn2").show();}); } );
 
 $("#btn4").click(function()
                  {$("#img1").slideToggle(3000); } );  

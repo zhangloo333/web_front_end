@@ -1,0 +1,36 @@
+[{
+		"name":"abc",
+		"country":"USA",
+		"age":25,
+		"image":"../IMG/anoceanofsky.jpg"
+},
+{
+"name":"def",
+"country":"India",
+"age":22,
+"image":"../IMG/Body.png"
+},
+{
+"name":"mno",
+"country":"Indonesia",
+"age":23,
+"image":"../IMG/Cart.png"
+},
+{
+"name":"def",
+"country":"India",
+"age":20,
+"image":"../IMG/Logo.png"
+},
+{
+	"name":"pqr",
+	"country":"Malaysia",
+	"age":22,
+	"image":"../IMG/smile.jpg"
+	},
+	{
+		"name":"xyz",
+		"country":"China",
+		"age":28,
+		"image":"../IMG/Store.png"
+		}]

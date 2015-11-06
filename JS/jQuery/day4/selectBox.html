@@ -12,7 +12,7 @@
 </select>
 <div id="div1">
     <p class="myclass">par1</p>
-    <p>par2<span>this is sppan inside p<a href="http://www.google.com"></span></p>
+    <p>par2<span>this is sppan inside p<a href="#"></span></p>
     <p>par3</p>
     <p>par4</p>
     <li class="mylist">item1</li>
@@ -129,7 +129,7 @@
     {
 
         var resul = $("div >p").text();
-        var resul = $("div >li").text();
+        //var resul = $("div >li").text();
         alert(resul);
     }
 
@@ -142,7 +142,7 @@
     function fcsip()
     {
 
-        var resul = $("div :nth-child(3)").text(); //
+        var resul = $("div :nth-child(1)").text(); //
         alert(resul);
     }
 
@@ -158,6 +158,8 @@
     }
 
 </script>
+
+
 
 <script>
     // click button open the link

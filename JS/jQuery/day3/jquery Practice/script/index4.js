@@ -1,7 +1,7 @@
  /*traversing*/
 $("#btn1").click(function(){
 
- $("span").parents("div").css({"background-color": "red"}); 
+ $("span").parents("div").css({"background-color": "red"});
 
 }
  );

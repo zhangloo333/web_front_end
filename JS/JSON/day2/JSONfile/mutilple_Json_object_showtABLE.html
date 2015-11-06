@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        table,td{border: 2px solid red;padding:0;}
+
+    </style>
+</head>
+<body>
+<table>
+    <tr id="first">
+        <td>name</td>
+        <td>country</td>
+        <td>age</td>
+        <td>img</td>
+    </tr>
+</table>
+<table>
+
+    <div></div>
+</table>
+<img src="../../../../IMG/150.jpg">
+<button id="btn">show table</button>
+<button id="btn1">cancle</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script>
+
+
+    $(document).ready(function () {
+    $.ajax({
+        type:"GET",
+        url:"studets.json",
+        dataType:"json",
+        success: function (response) {
+            //your code goes have
+//            alert(response[0].name);
+            students = response;
+//            alert(response.asn);
+        },
+        error: function () {
+            alert("erra");
+        }
+
+    });
+
+        $("#btn").on("click",makeTable);
+        $("#btn1").on("click",cancle1);
+
+    });
+    function makeTable()
+    {
+
+        for(var num in students)
+        {
+            $("div").prepend("<tr><td>"+students[num].name+"</td>" +
+                    "<td>"+students[num].country+"</td>" +
+                    "<td>"+students[num].age+"</td>" +
+                    "<td><img src="+students[num].imge+"/></td></tr>")
+
+        }
+        $("img").css({
+            height: "50px",
+            width:"50px"
+        });
+
+    }
+
+    function cancle1()
+    {
+        $("div").empty();
+
+    }
+
+
+
+</script>
+</body>
+</html>

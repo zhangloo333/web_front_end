@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+#tid{
+visibility:hidden;
+}
+table {
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid black;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+Enter Movie name <input type="text" id="t1"/>
+<br><br>
+<button id="btn">Search</button>
+<p id="show"></p>
+<table id="tid">
+<tr>
+    <th>Movie title</th>
+    <th>Year</th>
+    <th>Critics_score</th>
+    <th>Audience_score</th>
+</tr>
+</table>
+<script src="RottenTomatoes.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+<body>
+<div></div>
+<button id="btn">show Data</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $.ajax({
+            type:"GET",
+            url:"http://www.telize.com/geoip",
+            dataType:"json",
+            success:function(response){
+                alert(response.asn);
+                getData = response;
+
+            },
+            error:function(){
+               // alert("error");
+            }
+        });
+    });
+
+    $("#btn").click(function () {
+         var str = "absds";
+        console.log(str.match(/c/gi));
+    });
+    function buildTable()
+    {
+       $("div").append("<tr><td>ip</td>")
+
+
+    }
+
+
+</script>
+</body>
+</html>
