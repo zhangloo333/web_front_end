@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+</head>
+<body>
+<input type="checkbox" id="inpu1" class="intp">Select ALL
+<input type="checkbox" class="intp">ONE
+<input type="checkbox" class="intp">TWO
+<input type="checkbox" class="intp">Three
+<input type="checkbox" class="intp">Four
+<script>
+        $("#inpu1").change(function () {
+            $(".intp").prop("checked",$(this).prop("checked"));
+        });
+
+</script>
+</body>
+</html>

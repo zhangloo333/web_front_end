@@ -10,18 +10,13 @@
 </head>
 <body>
 <table>
-    <tr id="first">
+    <tr id="fist">
         <td>name</td>
         <td>country</td>
         <td>age</td>
         <td>img</td>
     </tr>
 </table>
-<table>
-
-    <div></div>
-</table>
-<img src="../../../../IMG/150.jpg">
 <button id="btn">show table</button>
 <button id="btn1">cancle</button>
 
@@ -54,7 +49,9 @@
 
         for(var num in students)
         {
-            $("div").prepend("<tr><td>"+students[num].name+"</td>" +
+//            var row=$("<tr></tr>");
+//            $("table").append(row);
+            $("#fist").after("<tr><td>"+students[num].name+"</td>" +
                     "<td>"+students[num].country+"</td>" +
                     "<td>"+students[num].age+"</td>" +
                     "<td><img src="+students[num].imge+"/></td></tr>")

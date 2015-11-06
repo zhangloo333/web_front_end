@@ -6,7 +6,7 @@ $(document).ready(function(){
 
                      type: "GET",
                      url: "http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=bzm7bkpkkm4wghg22xdbx4vy&q="+ mname,
-                     dataType: "jsonp",
+                     dataType: "json",
                      success: function(response){
                     	 
                     		

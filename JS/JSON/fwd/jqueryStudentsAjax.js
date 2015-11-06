@@ -7,7 +7,7 @@ $(document).ready(function(){
 	
 $.ajax({
 	type:"GET",
-	url:"../JSON/Students.json",
+	url:"Students.json",
     dataType:"json",
     success:function(students){
     	for (var i = 0; i < students.length; i++) {
