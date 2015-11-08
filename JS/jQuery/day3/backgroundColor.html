@@ -12,16 +12,16 @@
 <div class="did"></div>
 <p id="p1">this is my pase</p>
 <button id="btn1">add css style</button>
-<script src="../jquery-1.11.3.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
 //    $("#p1").addClass("first");
 //    $("#p1").addClass("first second");
-    $("#p1").addClass("third");
-$("#btn1").on("click", function () {
+$("#p1").addClass("third");
+    $("#btn1").on("click", function () {
+    alert(1);
+    $("#p1").removeClass("first     second third");
 
-$("#p1").removeClass("first second");
-
-})
+});
 //    $("#p1").removeClass("second");
 
 
