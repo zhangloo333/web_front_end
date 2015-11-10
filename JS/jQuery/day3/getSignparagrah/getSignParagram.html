@@ -19,12 +19,12 @@
     <p>this is second</p>
     <p>this is third</p>
     <p>this is fourd</p>
+    <p>this is five</p>
 
 
 <button id="btn2">show2</button>
 <button id="btn3">show3</button>
-
-<script src="../../jquery-1.11.3.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
 $("#btn").on("click", function () {
 //    var p = $("li").eq(1).text();
@@ -32,7 +32,6 @@ $("#btn").on("click", function () {
 
 //    $("li").eq("1").addClass("bg");
     $("li").eq(1).css({"color" : "red","font-size": "100px"});
-
 
 })
 
@@ -49,9 +48,9 @@ $("#btn").on("click", function () {
 
 $("#btn3").on("click", function () {
 
-            $("p").eq(2).css({"font-size", "100px");
+            $("p").eq(2).css({"font-size": "100px"});
             $("p").eq(3).css("color", "blue");
-            $("p").eq(4).css("background", "red")
+            $("p").eq(-1).css("background", "red")
         }
 )
 
