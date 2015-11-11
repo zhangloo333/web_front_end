@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="myP">I am a paragraph.</p>
+
+<p>Click the button get the HTML content of the p element.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+    function myFunction() {
+        var x = "<h1>sdasd</h1>";
+        document.getElementById("demo").innerHTML = x;
+        $("#demo").val(x);
+    }
+</script>
+
+</body>
+</html>

@@ -13,6 +13,7 @@ input letter:<input type="text" id="L1"/><br/>
 <textarea rows="1" cols="10" id="tx1"></textarea>
 <p id="eee"></p>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 <script>
 
@@ -21,13 +22,15 @@ input letter:<input type="text" id="L1"/><br/>
 			var s =document.getElementById("L1").value;
 
 			document.getElementById("tx1").innerHTML = s.toUpperCase();
+//			$("#tx1").val(s.toUpperCase());
 		}
 		function beLow()
 		{
 			var s =document.getElementById("L1").value;
 
 			var Smal= s.toLowerCase();
-			document.getElementById("tx1").innerHTML = Smal;
+			document.getElementById("tx1").value = Smal;
+
 		}
 
 /*

@@ -14,7 +14,10 @@
 <script>
     $(document).ready(
             function () {
-                $("#btn1").on("click",getContent);
+                $("#btn1").on("click", function () {
+                    getContent();
+                    abc();
+                });
             }    );
 
     function abc() {
