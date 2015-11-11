@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="samepleApp">
 <head>
-
-
+    <meta charset="utf-8">
+    <title>无标题文档</title>
     <script src="angular.js"></script>
     <script src="buttonSH.js"></script>
 </head>
@@ -16,7 +16,22 @@
 <ul>
     <li ng-repeat="num1 in items">{{num1}}</li>
 </ul>
+
+<table>
+    <tr>
+        <th>name</th>
+        <th>price</th>
+    </tr>
+    <tr ng-repeat="num2 in order">
+        <td>{{num2.name}}</td>
+        <td>{{num2.price}}</td>
+        <td><button ng-click="deleteR($index)">delete</button></td>
+    </tr>
+</table>
     <button ng-click="creatT()">build item</button>
+    <button ng-click="deleteF()" >Delet Frist</button>
+    <button ng-click="deleteL()">Delet Last</button>
+
 </div>
 
 
