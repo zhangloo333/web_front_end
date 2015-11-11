@@ -35,5 +35,9 @@ imgApp.controller("imgcontr", function ($scope) {
         $scope.order.splice(i,1);
 
     }// for delete whatever row you want
+    $scope.tableVisable=false;
+    $scope.showT= function () {
+        $scope.tableVisable=!$scope.tableVisable;
+    }
 
 });
