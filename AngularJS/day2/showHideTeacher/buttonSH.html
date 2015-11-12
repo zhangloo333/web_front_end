@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="samepleApp">
+<head>
+    <meta charset="utf-8">
+    <title>无标题文档</title>
+    <script src="angular.js"></script>
+    <script src="buttonSH.js"></script>
+</head>
+<style>
+    table,tr,td{border:1px solid red;
+    }
+
+</style>
+<body>
+
+
+<div ng-controller="imgcontr">
+<table border="1px solid red">
+    <tr>
+        <th>Index</th>
+        <th>name</th>
+        <th>price</th>
+        <th>delete Button</th>
+    </tr>
+    <tr ng-repeat="num2 in order" >
+        <td>{{$index}}</td>
+        <td>{{num2.name}}</td>
+        <td>{{num2.price}}</td>
+        <td><button ng-click="deleteR($index)">delete</button></td>
+        <td><button ng-click="showT($index)">showTable</button></td>
+    </tr>
+</table>
+    <button ng-click="creatT()">build item</button>
+    <button ng-click="deleteF()" >Delet Frist</button>
+    <button ng-click="deleteL()">Delet Last</button>
+    <div ng-init="img1" ng-show='tableVisable'>
+        <form>
+            <table>
+                <tr>
+                    <td>name:</td>
+                    <td><input type="text" ng-model="tname"></td>
+                </tr>
+                <tr>
+                    <td>price:</td>
+                    <td><input type="text" ng-model="tprice"></td>
+                </tr>
+                <tr>
+                    <td>index:</td>
+                    <td><input type="text" ng-model="tnum"></td>
+                </tr>
+                <tr>
+                    <td><button ng-click="saveI()">save</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+</div>
+
+
+</body>
+</html>
