@@ -36,8 +36,18 @@ imgApp.controller("imgcontr", function ($scope) {
 
     }// for delete whatever row you want
     $scope.tableVisable=false;
-    $scope.showT= function () {
+    $scope.showT= function (i) {
         $scope.tableVisable=!$scope.tableVisable;
+        $scope.tValueN= $scope.order[i];
+        $scope.numT=i;
+
+        //$scope.saveI=save();
     }
+
+
+    $scope.saveI= function() {
+        $scope.tableVisable=false;
+    }
+
 
 });

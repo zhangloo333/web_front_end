@@ -34,7 +34,7 @@
         <td>{{num2.name}}</td>
         <td>{{num2.price}}</td>
         <td><button ng-click="deleteR($index)">delete</button></td>
-        <td><button ng-click="showT()">showTable</button></td>
+        <td><button ng-click="showT($index)">showTable</button></td>
     </tr>
 </table>
     <button ng-click="creatT()">build item</button>
@@ -45,19 +45,22 @@
             <table>
                 <tr>
                     <td>name:</td>
-                    <td><input type="text"></td>
+                    <td><input type="text" ng-model="tValueN.name"></td>
                 </tr>
                 <tr>
                     <td>price:</td>
-                    <td><input type="text"></td>
+                    <td><input type="text" ng-model="tValueN.price"></td>
                 </tr>
                 <tr>
                     <td>name:</td>
-                    <td><input type="text"></td>
+                    <td><input type="text" ng-model="tValueN.name"></td>
                 </tr>
                 <tr>
                     <td>index:</td>
-                    <td><input type="text"></td>
+                    <td><input type="text" ng-model="numT"></td>
+                </tr>
+                <tr>
+                    <td><button ng-click="saveI()">save</button></td>
                 </tr>
             </table>
         </form>

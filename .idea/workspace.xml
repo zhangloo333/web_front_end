@@ -21,44 +21,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="buttonSH.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="buttonSH.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AngularJS/day2/buttonShowHideImg/buttonSH.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.617647">
-              <caret line="42" column="45" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="45" />
+            <state vertical-scroll-proportion="2.1744187">
+              <caret line="51" column="55" selection-start-line="51" selection-start-column="55" selection-end-line="51" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="buttonSH.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="buttonSH.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AngularJS/day2/buttonShowHideImg/buttonSH.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7020548">
-              <caret line="39" column="48" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="22" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularJS/day1/practis/test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.5294118">
-              <caret line="21" column="39" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="indexjs.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AngularJS/day1/practis/indexjs.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -125,8 +105,8 @@
         <option value="$PROJECT_DIR$/AngularJS/day1/practis/test.html" />
         <option value="$PROJECT_DIR$/AngularJS/day2/test/11.html" />
         <option value="$PROJECT_DIR$/AngularJS/day2/test/11.js" />
-        <option value="$PROJECT_DIR$/AngularJS/day2/buttonShowHideImg/buttonSH.html" />
         <option value="$PROJECT_DIR$/AngularJS/day2/buttonShowHideImg/buttonSH.js" />
+        <option value="$PROJECT_DIR$/AngularJS/day2/buttonShowHideImg/buttonSH.html" />
       </list>
     </option>
   </component>
@@ -770,16 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AngularJS/day1/imgShow/ImgeShowAndHide.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1489726">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="24" />
-          <folding>
-            <element signature="e#41#81#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JS/JSON/day3/examReview/selectRedio.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46886447">
@@ -852,18 +822,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AngularJS/day1/imgShow/ImgeShowAndHide.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53113556">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JS/day7/match.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15934066">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularJS/day1/imgShow/ImgeShowAndHide.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1489726">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="24" />
+          <folding>
+            <element signature="e#41#81#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularJS/day1/imgShow/ImgeShowAndHide.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6904762">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AngularJS/day1/practis/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46886447">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -876,29 +864,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AngularJS/day1/practis/test.html">
+    <entry file="file://$PROJECT_DIR$/AngularJS/day2/buttonShowHideImg/buttonSH.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5294118">
-          <caret line="21" column="39" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="39" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AngularJS/day2/buttonShowHideImg/buttonSH.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.617647">
-          <caret line="42" column="45" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="45" />
+        <state vertical-scroll-proportion="2.1744187">
+          <caret line="51" column="55" selection-start-line="51" selection-start-column="55" selection-end-line="51" selection-end-column="55" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AngularJS/day2/buttonShowHideImg/buttonSH.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7020548">
-          <caret line="39" column="48" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
