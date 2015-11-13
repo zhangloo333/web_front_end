@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function outer(){
+        var txt="hello";
+        alert("hellp in outerside")
+        function inner(){
+            alert("text in inner"+txt);
+
+        }
+    inner();
+    }
+
+    var p =outer();
+    p;
+
+</script>
+</body>
+</html>

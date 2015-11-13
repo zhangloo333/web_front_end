@@ -46,7 +46,7 @@
     <!--<img src="../../../IMG/150.jpg">-->
     <img ng-src='../../../IMG/{{imgSrc}}' ng-init="show1=true" ng-show="show1" ng-class="addClass">
     <button ng-click="imgSrc=imgArry[0]">red</button>
-    <button ng-click="imgSrc=imgArry[1]">amber</button>
+    <button ng-click="amber()">amber</button>
     <button ng-click="imgSrc=imgArry[2]">amber</button><br/>
     <p>How will you show/hide buttons and enabl
         e/disable buttons conditionally?</p>
@@ -96,13 +96,14 @@
     var myapp=angular.module("samepleApp",[]);
     myapp.controller("firCtr", function ($scope) {
         $scope.imgArry=['150.jpg','Logo.png','myicon.png'];
+        var imgArry1=['150.jpg','Logo.png','myicon.png'];
 //        $scope.red1= function () {
 //            $scope.imgSrc=imgArry[0];
 //        };
 //
-//        $scope.amber= function () {
-//            $scope.imgSrc=imgArry[1];
-//        };
+        $scope.amber= function () {
+            $scope.imgSrc=imgArry1[1];
+        };
 //        $scope.green= function () {
 //            $scope.imgSrc=imgArry[2];
 //        };
