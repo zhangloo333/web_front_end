@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p id="pid1"> i7-4720HQ四核处理器(2.60GHz 1600MHz 6MB)， 15.6" FHD IPS LED 全高清屏幕(1920x1080)，16.0GB内存，NVIDIA GeForce
+    GTX 960M 4GB独立显卡，1TB+8GB SSHD混合硬盘, Windows 10 Home 64</p>
+
+<p id="pid2">：双11特价，所有$1099以上的Alienware均可以使用这个优
+    惠码，再配上本身的折扣，简直划算到死！买！买！买！</p>
+
+<p id="pid3">Gaming desktop with iconic, innovative design, and tuned for ultimate performance. Featuring Intel® process
+    ors and and incredible configuration options</p>
+
+<p id="pid4">Gaming desktop with iconic, innovative design, and tuned for ultimate performance. Featuring Intel® p
+    rocessors and and incredible configuration options.</p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+        $(document).ready(function () {
+
+            function changColor()
+            {
+
+                function p1Color()
+                {
+                    $("#pid1").click(function () {
+                        $("#pid1").css("background-color","red");
+                    });
+                }
+
+                function p2Color()
+                {
+                    $("#pid2").click(function () {
+                        $("#pid2").css("background-color","yellow");
+                    });
+                }
+
+                function p3Color()
+                {
+                    $("#pid3").click(function () {
+                        $("#pid3").css("background-color","#ff6699");
+                    });
+                }
+
+                function p4Color()
+                {
+                    $("#pid4").click(function () {
+                        $("#pid4").css("background-color","#b3ec79");
+                    });
+                }
+                p1Color();
+                p2Color();
+                p3Color();
+                p4Color();
+            }
+            changColor();
+
+        });
+
+
+</script>
+
+
+
+</body>
+</html>

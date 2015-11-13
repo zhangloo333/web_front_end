@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function fruit(name2,color2,count2)
+    {
+        this.name1=name2;
+        this.color1=color2;
+        this.count1=count2;
+        this.showf= function () {
+            alert("this is fruit");
+        }
+    }
+
+    function carModel(name1,color1,price1)
+    {
+        this.name=name1;
+        this.color=color1;
+        this.price=price1;
+        this.showf= function () {
+            alert("this is carModel");
+        }
+    }
+
+    function furniture(name1,color1,price1)
+    {
+        this.name=name1;
+        this.color=color1;
+        this.price=price1;
+        this.showf= function () {
+            alert("this is furnitrue");
+        }
+    }
+
+    function laptop(name1,color1,price1)
+    {
+        this.name=name1;
+        this.price=this.price1;
+        this.color=color1;
+
+    }
+
+
+    var a={name:"abc",color:"red",count:1};
+    var car=[];
+    car[0]=new carModel("Toyota","black",18990);
+    car[1]=new carModel("Honda","sivel",2990);
+    car[2]=new carModel("BMW","white",38990);
+    for(num in car)
+    {
+        console.log(car);
+    }
+    car[0].showf();
+
+    var furnitureM=[];
+    furnitureM[0]=new furniture("sofa","red",120);
+    furnitureM[1]=new furniture("table","yellow",140);
+    furnitureM[2]=new furniture("TV","red",150);
+    furnitureM[3]=new furniture("Bed","amber",190);
+    console.log(furnitureM);
+
+    var laptopBrand=[];
+    laptopBrand[0]=new laptop("lenovo","black",899);
+    laptopBrand[1]=new laptop("HP","silver",700);
+    laptopBrand[2]=new laptop("SONY","black",900);
+    laptopBrand[3]=new laptop("Mac","silver",1000);
+    console.log(laptopBrand);
+
+</script>
+</body>
+</html>
