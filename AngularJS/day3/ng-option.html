@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="samepleApp">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body ng-controller="option">
+<p>first list</p>
+<select ng-model="country" ng-options="selectItem as item for item in countries" ng-style="inforcolor">
+</select>
+<p>second list</p>
+<select ng-model="nList" ng-options="item for item in countries">
+</select>
+
+<p>third list</p>
+<select ng-model="nameList" ng-options="item.age as item.name for item in nameList">
+</select>
+
+
+<p ng-style="inforcolor">Welcome</p>
+<button ng-click="changPColor()">change color</button>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+<script>
+    var myapp = angular.module("samepleApp",[]);
+    myapp.controller("option", function ($scope) {
+        $scope.countries=["usa","canada","UK","Russia"];
+        $scope.inforcolor={'color':'yellow','font-size':'50px'};
+        $scope.nameList = [{name: 'one', age: 30 },{ name: 'two', age: 27 },{ name: 'three', age: 50 }];
+        $scope.changPColor= function () {
+            $scope.inforcolor={'color':'red','font-size':'70px'};
+
+            }
+//        $scope.selectItem = $scope.item[0];
+
+    });
+
+</script>
+</body>
+</html>

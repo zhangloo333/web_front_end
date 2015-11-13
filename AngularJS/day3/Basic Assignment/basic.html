@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="samepleApp">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+<style>
+.img{
+    opacity: 0;
+    font-size: 21px;
+    margin-top: 25px;
+    text-align: center;
+
+    -webkit-transition: opacity 2s ease-in;
+    -moz-transition: opacity 2s ease-in;
+    -ms-transition: opacity 2s ease-in;
+    -o-transition: opacity 2s ease-in;
+    transition: opacity 2s ease-in;
+
+}
+.img1 {
+    opacity: 1;
+    font-size: 21px;
+    margin-top: 25px;
+    text-align: center;
+
+    -webkit-transition: opacity 10s ease-out;
+    -moz-transition: opacity 10s ease-out;
+    -ms-transition: opacity 10s ease-out;
+    -o-transition: opacity 10s ease-out;
+    transition: opacity 10s ease-out;
+}
+/*.img.load {*/
+    /*opacity: 1;*/
+/*}*/
+/*.img1.load{*/
+    /*opacity: 0;*/
+/*}*/
+
+</style>
+</head>
+<body>
+<div ng-controller="firCtr">
+
+<p>1.How will you display different images based on the
+    status being red, amber, or green?</p>
+    <!--<img src="../../../IMG/150.jpg">-->
+    <img ng-src='../../../IMG/{{imgSrc}}' ng-init="show1=true" ng-show="show1" ng-class="addClass">
+    <button ng-click="imgSrc=imgArry[0]">red</button>
+    <button ng-click="imgSrc=imgArry[1]">amber</button>
+    <button ng-click="imgSrc=imgArry[2]">amber</button><br/>
+    <p>How will you show/hide buttons and enabl
+        e/disable buttons conditionally?</p>
+    <button ng-click="show1=true" ng-disabled="eb">show</button>
+    <button ng-click="show1=!show1" ng-disabled="eb">hide</button><br/>
+
+    <button ng-click="enable(3)">enable</button>
+    <button ng-click="enable(2)">disable</button><br/>
+    <p>3.	How will you loop through a collection
+        and list each item?</p>
+    <p>4.Create a simple directive
+        that you can reuse across the application.</p>
+    <p>5.Write a simple Angular JS app that would fadeIn and
+        FadeOut an image (using angular and css3 -
+        hint:use ng-class)</p>
+    <button ng-click="fade(1)">fade In</button>
+    <button ng-click="fade(2)">fade Out</button>
+
+    <p>7.	Using Angular do the following: There is a checkbox
+        called “SELECT ALL” and 6 independent checkboxes.<br/>
+        a.	When you check “SELECT ALL” checkbox all the independent checboxes should be checked.<br/>
+        b.	When you uncheck “SELECT ALL” checkbox all independent checboxes should be unchecked.<br/>
+        c.	If you select all the independent checkboxes then the SELECT ALL should be checked.<br/>
+    </p>
+        <input type="checkbox" ng-model="parent" ng-checked="Reparent"/>Select ALL
+    <div ng-repeat="item in inputList">
+        <input type="checkbox" ng-checked="parent" ng-model="Reparent"/>{{item}}
+
+    </div>
+    <p>8.Make 3 input fields to enter the phone number.
+        After filling the first three digits
+        in FIRST FIELLD the cursor should automatically
+        move on to the second field and
+        when the second field is filled, it should move to the third field</p>
+    <div ng-repeat="tel in telphone">
+        {{tel}}:<input type="text"/>
+    </div>
+
+
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+<script>
+    var myapp=angular.module("samepleApp",[]);
+    myapp.controller("firCtr", function ($scope) {
+        $scope.imgArry=['150.jpg','Logo.png','myicon.png'];
+//        $scope.red1= function () {
+//            $scope.imgSrc=imgArry[0];
+//        };
+//
+//        $scope.amber= function () {
+//            $scope.imgSrc=imgArry[1];
+//        };
+//        $scope.green= function () {
+//            $scope.imgSrc=imgArry[2];
+//        };
+    $scope.enable= function (i) {
+        if(i==2)
+        {
+        $scope.eb=true;
+
+        }
+        else
+        {
+            $scope.eb=false;
+
+        }
+    };
+
+        $scope.fade= function (i) {
+            if(i==1)
+            {
+                $scope.addClass="img";
+
+            }
+            else
+            {
+                $scope.addClass="img1";
+
+            }
+        };
+
+        $scope.inputList=['one','two','three'];
+//        $scope.
+        $scope.telphone=['First','second','third'];
+    })
+
+</script>
+</body>
+</html>

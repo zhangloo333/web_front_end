@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="samepleApp">
+<head>
+    <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="switchIf.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div ng-controller="ifSwitch">
+
+<div ng-if="info">
+    Hello
+</div>
+
+<div ng-switch="country">
+    <p ng-switch-when="us">US</p>
+    <p ng-switch-when="American">American</p>
+    <p ng-switch-when="china">china</p>
+    <p ng-switch-when="Austrial">Austrial</p>
+</div>
+    <button ng-click="showIf()">show ng-if</button>
+    <button ng-click="showSwitch()">show ng-if</button>
+</div>
+</body>
+</html>

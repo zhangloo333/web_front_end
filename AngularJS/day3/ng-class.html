@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="sampleAPP">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .red{
+            background-color: #24BB46;
+        }
+
+        .size{
+            font-size: 80px;
+
+        }
+
+    </style>
+</head>
+<body ng-controller="fCtr">
+<div ng-class="fooClas">this is method 1
+<p>{{name}}</p>
+</div>
+
+<div ng-class="seClas">this is method 2
+<p>{{name}}</p>
+</div>
+
+<div ng-class="thidClas">this is method 3
+    <p>{{name}}</p>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+<script>
+    var fapp=angular.module("sampleAPP",[]);
+    fapp.controller("fCtr", function ($scope) {
+    $scope.name="asdas";
+     $scope.fooClas="red";
+
+     $scope.seClas=["red","size"];
+
+    $scope.thidClas={"red":false,"size":true};
+
+    });
+
+
+</script>
+</body>
+</html>
