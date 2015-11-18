@@ -9,6 +9,6 @@ myapp.controller("ifSwitch", function ($scope) {
         $scope.info=!$scope.info;
     };
     $scope.showSwitch=function(){
-        $scope.country="china";
+        $scope.country="us";
     };
 });

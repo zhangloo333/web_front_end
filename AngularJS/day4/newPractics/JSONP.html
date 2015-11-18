@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body ng-controller="movie">
+<table border="1px soild red">
+    <tr>
+        <th>city</th>
+        <th>country</th>
+        <th>countryCode</th>
+        <th>isp</th>
+        <th>lat</th>
+        <th>lon</th>
+        <th>org</th>
+        <th>query</th>
+        <th>region</th>
+        <th>regionName</th>
+        <th>status</th>
+        <th>timezone</th>
+        <th>zip</th>
+    </tr>
+    <tr ng-model="item">
+        <th>{{item.city}}</th>
+        <th>{{item.country}}</th>
+        <th>{{item.countryCode}}</th>
+        <th>{{item.isp}}</th>
+        <th>{{item.lat}}</th>
+        <th>{{item.lon}}</th>
+        <th>{{item.org}}</th>
+        <th>{{item.query}}</th>
+        <th>{{item.region}}</th>
+        <th>{{item.regionName}}</th>
+        <th>{{item.status}}</th>
+        <th>{{item.timezone}}</th>
+        <th>{{item.zip}}</th>
+    </tr>
+</table>
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script>
+    var modelMovie = angular.module("myApp",[]);
+    modelMovie.controller("movie", function ($scope, $http) {
+        var http = $http.jsonp('http://www.ip-api.com/json?callback=JSON_CALLBACK');
+//        $http.get("http://www.ip-api.com/json").success(function (response) {
+        http.success(function (response) {
+//            alert(1);
+            $scope.item = response;
+            console.log($item);
+        });
+//        $http.jsonp("http://www.ip-api.com/json").error(function (data) {
+//            alert("error"+data);
+//        })
+        http.error(function (data) {
+            alert("error"+data);
+        })
+    })
+</script>
+</body>
+</html>

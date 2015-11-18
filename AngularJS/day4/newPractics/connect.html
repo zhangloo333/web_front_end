@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div ng-controller="Json">
+    <div ng-repeat="item in cars">
+
+    <p>{{item.name}}</p>
+    </div>
+
+<div>
+    <table border="1px solid red">
+        <tr>
+            <th>Number</th>
+            <th>Name</th>
+            <th>color</th>
+            <th>price</th>
+        </tr>
+        <tr ng-repeat="item in cars" >
+            <td>{{$index}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.color}}</td>
+            <td>{{'$'+item.price}}</td>
+        </tr>
+    </table>
+</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+<script>
+//    $.ajax()
+    var app = angular.module("myApp",[]);
+    app.controller("Json", function ($scope,$http) {
+
+        $http.get("data.json").success(function (response) {
+            $scope.cars=response;
+        })
+    });
+</script>
+</body>
+</html>

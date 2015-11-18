@@ -53,6 +53,8 @@ imgApp.controller("imgcontr", function ($scope) {
         $scope.order[$scope.tnum].name =  $scope.tname;
         $scope.order[$scope.tnum].price = $scope.tprice;
 
+        //$scope.order.splice($scope.tnum,1,{"name":$scope.tname,"price":$scope.tprice});
+
         $scope.tableVisable=false;
     }
 

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+SearchBox:<input type="text" id="txt"><br/>
+<button id="btn">show</button>
+<div id="output"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                type:"GET",
+                url:"../JSONfile/studets.json",
+                success: function (response) {
+                    $("#btn").on("click", function () {
+//                        alert(111);
+                        buildTable(response);
+                    })
+                },
+                error: function () {
+                    alert("error");
+                }
+
+
+            });
+
+
+        });
+
+
+
+
+        function buildTable(temp)
+        {
+            var str = $("#txt").val();
+            console.log(str);
+            var mark;
+
+            for(var num in temp)
+            {
+//                if(str.search("/"+temp[num].name+"/g") != null)
+//                {
+                    alert(num);
+
+                        console.log(tempNew);
+                    var result=temp[num].name.search(tempNew);
+                    if(result != -1)
+                    {
+
+                        console.log("匹配："+result);
+                        break;
+                    }
+                    else
+                    {
+                        console.log("不匹配："+result);
+                    }
+
+                    //mark=num;
+                    console.log(num);
+//                    $("div").append("<tr><td>"+temp[num].name+"</td><td>"+temp[num].country+"</td>" +
+//                            "<td>"+temp[num].age+"</td>" +
+//                            "<td>+temp[num].imge+</td></tr>");
+
+//                }
+
+            }
+
+        }
+
+
+    </script>
+
+
+
+
+</body>
+</html>

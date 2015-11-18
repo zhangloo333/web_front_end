@@ -7,18 +7,20 @@
 
  
 <div ng-controller="myCtrl">
-<p ng-hide="true">Hello World</p>
+<p ng-init="hidep=true" ng-hide="hidep">Hello World</p>
 <span ng-init="foo='peter'">Hi</span>
+<p>Name : <input type="text" placeholder="Enter name here"></p>
 <p>Name : <input type="text" ng-model="foo" placeholder="Enter name here"></p>
+<button ng-click="hidep=!hidep">show</button>
 <button ng-click="foo='james'">Change</button>
 
 <h1>Hello {{foo}}</h1>
 
-<img src="../../../IMG/Logo.png" ng-init="foobar" ng-show="foobar">
+<img src="../../IMG/Logo.png" ng-init="foobar" ng-show="foobar">
 <button  ng-click="foobar=true">Show</button>
 <button  ng-click="foobar=false">Hide</button>
 <br><br>
-<img src="../../../IMG/Logo.png" ng-init="img1" ng-show="imgfoo"  >
+<img src="../../IMG/Logo.png" ng-init="img1" ng-show="imgfoo"  >
 <input type="checkbox" ng-model="imgfoo" ng-click="img1='checked'"/>Show Image
 <br><br>
 <input type="checkbox" ng-model="checked">I agree to terms<br/>

@@ -5,10 +5,44 @@
     <title>Table pi</title>
 </head>
 <body>
-<table>
-
+<table border="1px solid green">
+    <tr id="firstR">
+        <td>name</td>
+        <td>value</td>
+        <td>price</td>
+        <td><button id="aaa">show</button></td>
+    </tr>
 </table>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
+    function fruit(name2,color2,count2)
+    {
+        this.name1=name2;
+        this.color1=color2;
+        this.count1=count2;
+        this.addRow= function () {
+            $("#firstR").after("<tr><td>"+this.name1+"</td>" +
+                    "<td>"+this.color1+"</td>" +
+                    "<td>"+this.count1+"</td></tr>")
+        }
+    }
+
+    var fruitArry=[];
+    fruitArry[0]=new fruit("apple","red",5);
+    fruitArry[1]=new fruit("Banana","yellow",0.6);
+    fruitArry[2]=new fruit("piapple","amber",3);
+
+    var count = 0;
+    $("#aaa").click(function(){
+        if(count<=(fruitArry.length))
+        {
+            fruitArry[count].addRow();
+
+        }
+        console.log(count);
+        count++;
+
+    });
 
 
 </script>

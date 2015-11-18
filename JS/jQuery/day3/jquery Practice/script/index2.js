@@ -4,6 +4,9 @@ $('#inp').blur(function(){
 
 $('#inp').hover(function(){
   $("#inp").css("background-color", "yellow");
+}, function () {
+    $("#inp").css("background-color", "");
+
 });
 
 

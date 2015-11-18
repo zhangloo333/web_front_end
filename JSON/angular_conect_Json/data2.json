@@ -1,0 +1,19 @@
+{
+  "carModel": [
+    {
+      "name": "yoyouta",
+      "price": 1500,
+      "color": "red"
+    },
+    {
+      "name": "honda",
+      "price": 1500,
+      "color": "black"
+    },
+    {
+      "name": "BMW",
+      "price": 2500,
+      "color": "white"
+    }
+  ]
+}

@@ -8,6 +8,12 @@ $(document).ready(function () {
     $('#infor').on("mouseover", function () {
         alert("hi");
     });
+$("input:first").on("keypress", function () {
+    alert('sdsad');
+})
+$("input:last").on("keydown", function () {
+    alert('a');
+})
 
     //$( "#infor" ).mouseover(function() {
     //    alert("hi");    });
