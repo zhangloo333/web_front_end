@@ -23,7 +23,7 @@
             <td>{{$index}}</td>
             <td>{{item.name}}</td>
             <td>{{item.color}}</td>
-            <td>{{'$'+item.price}}</td>
+            <td>{{item.price | currency}}</td>
         </tr>
     </table>
 </div>
