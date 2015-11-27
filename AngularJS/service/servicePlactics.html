@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>Service practicce</h1>
+<ol>
+    <li>find element in array</li>
+    <li>find duplicate array</li>
+    <li>reverse string</li>
+    <li>find particullay a word array</li>
+    <li>end of value number or string</li>
+    <li>find zip-code or 90000 or 9000-001</li>
+</ol>
+
+<div ng-controller="serviceP">
+    <h3>work zone</h3>
+    <input type="text" ng-model="in" placeholder="input a array" ng-keyup="keyup()"/>
+    <input type="text" ng-model="in2" placeholder="element you want to find"/>
+    <p><button ng-click="fe()">find element in array</button></p>
+    <p> <button ng-click="fd()">find duplicate element in array</button></p>
+    <p><button ng-click="reverse1()">find reverse string in array</button></p>
+    <p><button ng-click="fw()">find perticullay word</button></p>
+    <p><button ng-click="end1()">end of value number</button></p>
+    <p><button ng-click="zip()">find zip-code or 9000 or 9000-001</button></p>
+    <div id="showZone">
+        <p>input array is {{zArray}}</p>
+        <p>this is result {{zone}}</p>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.js"></script>
+<script>
+    var app = angular.module("myapp",[]);
+    app.controller("serviceP", function ($scope,utility) {
+//        $scope.zone =
+        var test;
+        $scope.keyup= function () {
+            test = utility.becomeArray($scope.in);
+            $scope.zArray = test;
+//            console.log(test);
+        };
+        $scope.reverse1= function () {
+//           var temp = $scope.zArray;
+           var temp = utility.becomeArray($scope.in);
+            $scope.zone = utility.reverseArray(temp);
+//            alert($scope.zArray+$scope.zone);
+        };
+
+        $scope.fe = function () {
+            $scope.zone = utility.findElemnt($scope.in2,test,'fe');
+        };
+
+        $scope.fw = function () {
+            $scope.zone = utility.findElemnt($scope.in2,test,'fw');
+
+        };
+
+        $scope.end1 = function () {
+            $scope.zone = utility.endVaule(test);
+        }
+    });
+
+    app.service("utility",function(){
+
+        this.becomeArray = function (string) {
+            var array=[];
+            array = string.split(",");
+            return array
+        };
+
+        this.findElemnt = function (elem,array,str) {
+            var pos = array.indexOf(elem);
+            if(pos == -1)
+            {
+                return "this element is not in array"
+            }
+            else
+            {
+                if(str == 'fe')
+                {
+                    return "this element is in this array"
+                }
+                else
+                {
+                    return "this element is in "+pos+" position"
+                }
+            }
+        };
+
+        this.reverseArray = function(array){
+
+            var reversArr =array.reverse();
+            return reversArr
+        }
+
+        this.endVaule = function(array)
+        {
+
+            return 'the last numbe is '+ array[array.length-1]
+        }
+
+        this.findDuplic = function(array)
+        {
+
+        }
+    });
+</script>
+</body>
+</html>

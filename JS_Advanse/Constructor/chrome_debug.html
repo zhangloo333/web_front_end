@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function Parent()
+    {
+        this.name='human';
+        this.age=40;
+        this.job='engineer';
+    }
+    function Childrens()
+    {
+        this.study ='study';
+        this.hight= 1.3;
+    }
+
+    Childrens.prototype = new Parent();
+    var cc = new Childrens();
+</script>
+</body>
+</html>

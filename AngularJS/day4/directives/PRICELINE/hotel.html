@@ -1,0 +1,27 @@
+<div ng-controller="hotelCtrl">
+    <div class="row">
+    <h1>{{title}}</h1>
+    <h5>Where are you going?</h5>
+    <p><input type="text" class="col-lg-11" placeholder={{place}}></p>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+        <h5>Check-in</h5>
+        <p><input type="date"></p>
+        </div>
+        <div class="col-md-4">
+        <h5>Check-out</h5>
+        <p><input type="date"></p>
+        </div>
+        <div class="col-md-4">
+        <h5>Room</h5>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
+            <li role="separator" class="divider"><b>1 room</b></li>
+            <li role="separator" class="divider"><b>2 rooms</b></li>
+            <li role="separator" class="divider"><b>3 rooms</b></li>
+            <li role="separator" class="divider"><b>4 rooms</b></li>
+            </ul>
+        </div>
+    </div>
+
+</div>

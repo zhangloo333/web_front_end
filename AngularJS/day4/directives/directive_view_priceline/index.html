@@ -3,11 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>priceLine Booking System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link rel="stylesheet" href="App.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+    <script src="contrApp.js"></script>
 </head>
 <body>
-    <header>
-        <a href="#"></a>
-    </header>
+    <div id="wapper">
+        <header>
+                <div ng-controller="navP">
+
+            <ul class="nav nav-tabs nav-justified">
+                <li role="presentation" ng-repeat="item in Navbar" ><a href="#/{{item}}">{{item}}</a></li>
+
+
+                <!--<li role="presentation" ><a href="#/Hotels">Hotels</a></li>-->
+                <!--<li role="presentation"><a href="#/Flights">Flights</a></li>-->
+                <!--<li role="presentation"><a href="#/Cars">Cars</a></li>-->
+                <!--<li role="presentation"><a href="#/Vacation Packages">Vacation Packages</a></li>-->
+                <!--<li role="presentation"><a href="#/More">More</a></li>-->
+            </ul>
+                </div>
+        </header>
+        <div ng-view class="view"></div>
+
+        <footer>this is footer</footer>
+
+    </div>
 
 
 </body>

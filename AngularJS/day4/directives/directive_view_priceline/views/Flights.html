@@ -1,0 +1,56 @@
+
+<div ng-controller="Flights">
+    <div id="basic">
+    <h1>Search Flights</h1>
+    <input type="radio" ng-repeat="item in radioName">{{item}}
+    <p>Choose your flight option</p>
+    <button id="roundTrip">Round-trip</button>
+    <button id="oneway">one-way</button>
+    <button id="Mutip-Destin">Multi-Destination</button>
+    <input type="checkbox">Non-Stop Flights Only
+    </div>
+    <div id="option">
+
+    </div>
+    <div id="passage">
+        <div>
+            <b>Passengers</b>
+            <div>
+                <p>Adults(18+year)</p>
+                <select>
+                    <option>0 Adult</option>
+                    <option selected="selected">1 Adult</option>
+                    <option ng-repeat="itemp in AdultNum">{{itemp}}</option>
+                </select>
+            </div>
+            <div>
+                <p>Children(2-17year)</p>
+                <option selected="selected">0 Adult</option>
+                <option ng-repeat="itemp in ChildNum">{{itemp}}</option>
+            </div>
+        </div>
+        <div>
+            <p>Advanced flight options</p>
+            <div>
+                Cabin Class<br/>
+                <select>
+                    <option selected="selected">Economy/Coach</option>
+                    <option ng-repeat="icanbin in cabin">{{icanbin}}</option>
+                </select>
+            </div>
+            <div>
+                Airline<br/>
+                <select>
+                    <option selected="selected">Economy/Coach</option>
+                    <option ng-repeat="icanbin in cabin">{{icanbin}}</option>
+                </select>
+            </div>
+        </div>
+        <div id="lastSub">
+            <button>Searcher All Filghts</button>
+            <span>Save money and earn miles on your favorite airlines!</span>
+        </div>
+    </div>
+
+</div>
+

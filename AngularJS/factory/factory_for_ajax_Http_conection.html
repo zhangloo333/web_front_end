@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div ng-controller="tFactory">
+    <input type="text" ng-model="in" placeholder="please input movice name">
+    <button ng-click="ff()">click</button>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.js"></script>
+<script>
+    var app = angular.module("myApp",[]);
+    app.controller("tFactory", function ($scope,httpFactor) {
+
+        $scope.ff= function () {
+//            alert(1);
+            var movic = $scope.in;
+            var httpAddr = "http://angularjs.org/greet.php?name=premRatanDhanPayo&callback=JSON_CALLBACK";
+//            httpAddr += movic;
+            console.log(httpAddr);
+            httpFactor.fetchData(httpAddr).success(function(response)
+            {
+//                alert(response.total);
+                console.log(response);
+            });
+
+//           console.log( httpFactor.fetchData(httpAddr,'GET'));
+        }
+    });
+
+    app.factory("httpFactor", function($http)
+    {
+        var myfact = {};
+//        myfact.fetchData = function(aurl,type){
+//            return $http.jsonp({
+//                url:aurl,
+//                method:type
+//            })
+
+            myfact.fetchData = function(aurl){
+            return $http.jsonp({
+                url:aurl
+            })
+
+        };
+
+        return myfact;
+    });
+
+</script>
+</body>
+</html>

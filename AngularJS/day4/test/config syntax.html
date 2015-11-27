@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+
+appt.config(['$routeProvider', function ($routeProvider) {
+$routeProvider.when().when();}]);
+</script>
+
+<script>
+    appt.config(['$routeProvider', function ($routeProvider) {
+        $routeProvider.when('/Hotels',{
+            templateUrl:'views/Hotel.html',
+            controller:'Hotels'
+        }).when('/Flights',{
+            templateUrl:'view/Flights.html',
+            controller:'Flights'
+        });
+    }]);
+</script>
+</body>
+</html>

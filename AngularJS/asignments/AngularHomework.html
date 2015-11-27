@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="samepleApp">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+<style>
+.img{
+    opacity: 0;
+    font-size: 21px;
+    margin-top: 25px;
+    text-align: center;
+
+    -webkit-transition: opacity 2s ease-in;
+    -moz-transition: opacity 2s ease-in;
+    -ms-transition: opacity 2s ease-in;
+    -o-transition: opacity 2s ease-in;
+    transition: opacity 2s ease-in;
+
+}
+.img1 {
+    opacity: 1;
+    font-size: 21px;
+    margin-top: 25px;
+    text-align: center;
+
+    -webkit-transition: opacity 10s ease-out;
+    -moz-transition: opacity 10s ease-out;
+    -ms-transition: opacity 10s ease-out;
+    -o-transition: opacity 10s ease-out;
+    transition: opacity 10s ease-out;
+}
+/*.img.load {*/
+    /*opacity: 1;*/
+/*}*/
+/*.img1.load{*/
+    /*opacity: 0;*/
+/*}*/
+
+</style>
+</head>
+<body>
+<div ng-controller="firCtr">
+
+<p>1.How will you display different images based on the
+    status being red, amber, or green?</p>
+    <!--<img src="../../../IMG/150.jpg">-->
+    <img ng-src='../../IMG/{{imgSrc}}' ng-init="show1=true" ng-show="show1" ng-class="addClass">
+    <button ng-click="imgSrc=imgArry[0]">red</button>
+    <button ng-click="amber()">amber</button>
+    <button ng-click="imgSrc=imgArry[2]">amber</button><br/>
+    <p>How will you show/hide buttons and enabl
+        e/disable buttons conditionally?</p>
+    <button ng-click="show1=true" ng-disabled="eb">show</button>
+    <button ng-click="show1=!show1" ng-disabled="eb">hide</button><br/>
+
+    <button ng-click="enable(3)">enable</button>
+    <button ng-click="enable(2)">disable</button><br/>
+    <p>3.	How will you loop through a collection
+        and list each item?</p>
+    <p>4.Create a simple directive
+        that you can reuse across the application.</p>
+    <p>5.Write a simple Angular JS app that would fadeIn and
+        FadeOut an image (using angular and css3 -
+        hint:use ng-class)</p>
+    <button ng-click="fade(1)">fade In</button>
+    <button ng-click="fade(2)">fade Out</button>
+
+    <p>7.	Using Angular do the following: There is a checkbox
+        called “SELECT ALL” and 6 independent checkboxes.<br/>
+        a.	When you check “SELECT ALL” checkbox all the independent checboxes should be checked.<br/>
+        b.	When you uncheck “SELECT ALL” checkbox all independent checboxes should be unchecked.<br/>
+        c.	If you select all the independent checkboxes then the SELECT ALL should be checked.<br/>
+    </p>
+        <input type="checkbox" ng-model="parent" ng-checked="Reparent"/>Select ALL
+    <div ng-repeat="item in inputList">
+        <input type="checkbox" ng-checked="parent" ng-model="Reparent"/>{{item}}
+
+    </div>
+    <p>8.Make 3 input fields to enter the phone number.
+        After filling the first three digits
+        in FIRST FIELLD the cursor should automatically
+        move on to the second field and
+        when the second field is filled, it should move to the third field</p>
+    <!--<div class="tel">-->
+        <!--<input type="text" ng-repeat="tel in telphone" ng-keyup="jump()" placeholder="{{tel}}"/>-->
+    <!--</div>-->
+    <div id="tel">
+        <input type="text" maxlength='3'/>
+        <input type="text"/>
+        <input type="text" maxlength='4'/>
+    </div>
+
+    <div id="Q9" style="width: 70%" ng-controller="Q9">
+        <b>9.	Make ONE text input for phone number but this
+            time, after entering the first three digits a dash
+            (-) should appear and then
+            you enter the second digit of numbers and then again
+            the dash should appear.. For ex 408-980-0045</b><br/>
+        <input type="text" id="as" ng-model="in" ng-keyup="tel()"/>
+    </div>
+
+    <div id="Q10" style="width:70%" ng-controller="Q10">
+        <p>10.	<b>CONFIGURING:</b>  Now to the above text field (question 3) – Make it configurable so that it is adding they hypen based on user’s choice. Prompt the user for the format he/she wants. </p>
+        <ol type="a">
+            <li>If the user gives a format like 3, 3, 2 that means that your input box should have hypen(-)
+                after 3digits-3digits-2digits :		123-345-98
+            </li>
+            <li>If the user gives a format like 4, 2, 3
+                that means that your input box should have
+                hypen(-) after 4digits-2digits-3digits:
+                1234-44-123
+            </li>
+            <li>
+               If the user gives a format like 3, 2, 3 that means that your
+                input box should have hypen(-) after:		123-45-323
+            </li>
+            <input type="text" id="in1" placeholder="give a formate" ng-model="in"/>
+            <input type="text" id="in2"placeholder="input tel number" ng-model="intxt" ng-focus="focus"/>
+            <button id="btn">abd</button>
+        </ol>
+    </div>
+</div>
+
+<div ng-controller="Q11" id="Q11" style="width: 70%">
+    <p>11.	Create a custom directive that would take different for each directive (ISOLATES the scope of each directive).</p>
+
+</div>
+
+<div ng-controller="Q12" id="Q12" style="width: 70%">
+   <p>
+    12.	Create Angular directive : where an input field should
+       detect and only accept numeric values. It any non-numeric
+       value is allowed, it should be erased  as soon as you type.
+   </p>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.js"></script>
+<script src="homework.js"></script>
+</body>
+</html>

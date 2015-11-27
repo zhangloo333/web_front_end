@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div ng-controller="myController">
+    {{data.time}}
+
+    <br/>
+    <button ng-click="updateTime()">update time - ng-click</button>
+    <button id="updateTimeButton"  >update time</button>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.js"></script>
+
+<script>
+    var module = angular.module("myapp", []);
+    var myController1 = module.controller("myController", function($scope) {
+
+        $scope.data = { time : new Date() };
+
+        $scope.updateTime = function() {
+            $scope.data.time = new Date();
+        }
+
+        document.getElementById("updateTimeButton")
+                .addEventListener('click', function() {
+                    console.log("update time clicked");
+                    $scope.data.time = new Date();
+                    $scope.$digest();
+                });
+    });
+
+
+
+</script>
+
+<h3>join</h3>
+<script>
+	var greating1 = "wel,com";
+		var gar1 = greating1.split(",");
+	document.write(gar1);
+    console.log(gar1);
+	</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body ng-controller="sampleCtrl">
+<button ng-click="cc()">click</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.js"></script>
+<script>
+
+    var testApp= angular.module("myApp",[]);
+    testApp.controller("sampleCtrl",function($scope,demoFac){
+
+        $scope.cc = function () {
+            alert(1);
+            demoFac.fetchUserDetails("http://angularjs.org/greet.php?name=premRatanDhanPayo&callback=JSON_CALLBACK").success(function(response){
+                console.log(response);
+            });
+        }
+    });
+
+    testApp.factory("demoFac", function($http){
+        var obj = {};
+
+        obj.fetchUserDetails = function(aurl){
+            return $http.jsonp( aurl);
+        }
+
+        return obj;
+    });
+</script>
+</body>
+</html>

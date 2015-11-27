@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div ng-controller="crt1" style="background-color: #463DD4">
+    <input type="text" ng-model="in1">
+    <input type="text" ng-model="in2" ng-keyup="mmi()">
+    <button ng-click="btn()">click</button>
+    <!--<p>{{result}}</p>-->
+    <p>{{zipd}}</p>
+    <!--<button ng-click="mmi()">click</button>-->
+</div>
+<div ng-controller="crt2" style="background-color: #C00000">
+    <!--<p>{{result}}</p>-->
+    <p>{{re}}</p>
+    <button ng-click="btn()">click</button>
+    <!--<button ng-click="mmi()">click</button>-->
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.js"></script>
+<script>
+
+    var app = angular.module("myApp",[]);
+    app.controller("crt1", function ($scope,calService,shareData) {
+        $scope.result=0;
+
+        $scope.btn= function () {
+//        $scope.result = calService.calTax($scope.in1,$scope.in2);
+            shareData.setData($scope.in1);
+            console.log(shareData.getData());
+
+        }
+
+
+    });
+
+    app.controller("crt2", function ($scope,calService,shareData) {
+            $scope.re =0;
+        $scope.btn= function () {
+            console.log(shareData.getData());
+            $scope.re = shareData.getData();
+        }
+//        $scope.mmi= function () {
+//            $scope.result = calService.calTax(5,6);
+//            $scope.mmi= function () {
+//                $scope.result = calService.calTax($scope.in1,$scope.in2);
+//            }
+//        }
+
+    });
+    app.service("calService", function () {
+        this.calTax = function (a,b) {
+            return a*b;
+        }
+    });
+    app.service("shareData", function () {
+       var zipcode = 0;
+        this.setData= function (zip) {
+             zipcode = zip;
+        }
+        this.getData = function () {
+            return zipcode
+        }
+
+    });
+</script>
+</body>
+</html>

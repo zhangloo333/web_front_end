@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div ng-controller="numberPut" >
+    <!--<input  ng-keypress="">{{in}}-->
+    <input type="text" class="numberIn" ng-model="in" ng-keyup="keyup($event)">
+    <!--<p>event keyCode: {{keycode}}</p>-->
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.js"></script>
+<script>
+    app = angular.module("app",[]);
+    app.controller("numberPut", function ($scope) {
+            var input,temp,k;
+        $scope.keyup= function (event) {
+           $scope.keycode = event.keyCode;
+            k = event.keyCode;
+            if(k == 32 || (k >=48 && k <= 57) || (k >=96 && k<105))
+            {
+                temp = $scope.in;
+                $scope.in= temp;
+
+            }
+            else
+            {
+                if(temp == "" || temp == null)
+                {
+                    temp = "";
+                }
+                else
+                {
+                    $scope.in = temp;
+                }
+            }
+//            if(temp != "" || temp != null)
+//            {
+//                if(k == 32 || (k >=48 && k <= 57) || (k >=96 && k<105)
+//                {
+//                     temp= $scope.in;
+//                }
+//
+//            }
+
+            console.log($scope.keycode);
+
+        }
+        
+        
+//        console.log(a);
+
+//        }
+    });
+
+</script>
+</body>
+</html>

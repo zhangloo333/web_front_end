@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<button id="btn" onclick="action()">show something</button>
+<script>
+    function Plant()
+    {
+        this.name = 'plant';
+        this.color = 'Red';
+        this.smell= function () {
+            alert("good");
+        }
+
+    }
+    Plant.prototype.country="USA";
+    var a = new Plant();
+    alert(Plant.prototype.country);
+
+    function Fruit(count2,type2)
+    {
+        this.count1=count2;
+        this.type1=type2;
+    }
+
+    Fruit.prototype = new Plant();
+    var banana = new Fruit();
+    banana.count1=10;
+    banana.type1="banana fruit";
+
+    function action()
+    {
+        console.log(banana.name);
+        console.log(banana.color);
+        console.log(banana.smell());
+        console.log(banana.count1);
+        console.log(banana.type1);
+
+    }
+
+</script>
+</body>
+</html>

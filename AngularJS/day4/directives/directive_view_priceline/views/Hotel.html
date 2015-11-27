@@ -1,0 +1,28 @@
+
+<div ng-controller="Hotels">
+    <h1> {{htitle}} <span class=" glyphicon glyphicon-home" aria-hidden="true"></h1></h1>
+    <!--<serchfiled tmptitle="{{vtitle}}" phc="{{vph}}"></serchfiled>-->
+    <div>
+        <p>{{tempTitle}}</p>
+        <input type="text" placeholder="{{ph}}">
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+        <p>check in</p>
+        <input type="date" placeholder="choose Date">
+        </div>
+        <div class="col-md-4">
+        <p>check out</p>
+        <input type="date" placeholder="choose Date">
+        </div>
+
+        <div class="col-md-4">
+        <p>Rooms</p>
+        <select>
+            <option selected="selected"><b>1 Room</b></option>
+            <option ng-repeat="item2 in rooms"><b>{{item2}} Rooms</b></option>
+        </select>
+        </div>
+    </div>
+
+</div>
