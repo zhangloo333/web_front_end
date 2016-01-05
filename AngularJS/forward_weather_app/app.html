@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html ng-app="weatherApp">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.js"></script>
+<script src="app.js"></script>
+
+<style>
+.days{
+
+width:130px;
+height:90px;
+float:left;
+color:white;
+
+}
+.app{
+background-image: url("img1.jpg");
+width:700px;
+height:300px;
+color:white;
+border-style:solid;
+    border-width:5px;	
+    border-color:rgb(00,20,120);
+
+}
+.videoapp{
+background-image: url("img1.jpg");
+width:700px;
+height:500px;
+color:white;
+border-style:solid;
+    border-width:5px;	
+    border-color:rgb(00,20,120);
+
+}
+img{
+width:50px;
+height:50px;
+}
+#videodaily{
+
+width:200px;
+height:130px;}
+
+</style>
+</head>
+
+ <body >
+ 
+ <div ng-controller="weatherCtrl" class="app">
+        <form>
+          <input type="number" ng-model="zip" style="color:black;">
+          <input type="submit" class="btn btn-success" value="Search" ng-click="findWeather(zip)">
+        </form>
+        <p ng-show="zip">Searching the forecasts for: {{zip}}</p>
+        <div>
+          <h1>Forecast For: {{ place.location.city }}</h1>
+          <h2>Current: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg; <img src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif"/></h2>
+          <div class="days" ng-repeat="forecast in place.item.forecast">
+            <p><strong>{{ forecast.date }}</strong> – {{ forecast.text }}</p>
+            <p>H: {{ forecast.high }}&deg; | L: {{ forecast.low }}&deg;</p>
+          </div>
+        </div>
+        
+</div>
+
+<div ng-controller="videoCtrl" class="videoapp">
+        
+        
+        
+         <form>
+          <input type="text" ng-model="city" style="color:black;">
+          <input type="submit" class="btn btn-success" value="Search Video" ng-click="cityvideo(city)">
+        </form>
+        <h1 align="center">Latest Video Of {{city}}</h1>
+        <div  calss="well" ng-repeat="x in video_data" class="col-sm-3" id="videodaily">
+          <p id="videodaily"> <img  src={{x.thumbnail_url}}><br><a href={{x.url}}>{{x.title}}</a> </p>
+            
+          </div>
+        
+
+
+</div>
+
+
+<div ng-controller="newsCtrl" class="videoapp">
+        
+        
+        
+         <form>
+          <input type="text" ng-model="item" style="color:black;">
+          <input type="submit" class="btn btn-success" value="SearchNews" ng-click="newssearch(item)">
+        </form>
+        
+      <p>  {{news_data}}</p>
+
+
+</div>
+        
+      </body>
+
+
+</html>

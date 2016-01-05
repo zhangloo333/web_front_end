@@ -1,0 +1,36 @@
+/*
+Error: Invalid CSS after "</video>": expected "{", was ""
+        on line 33 of new.scss
+
+28: 
+29: <source src="https://udemy-assets-on-demand.udemy.com/2015-01-21_09-34-36-ed910462cc755ea9aba4c704f50eb455/WebHD.mp4?nva=20151212020112&amp;token=0f3847442f863c6e9c58a" type="video/mp4" data-res="360">
+30: 
+31: <source src="https://udemy-assets-on-demand.udemy.com/2015-01-21_09-34-36-ed910462cc755ea9aba4c704f50eb455/WebHD_720p.mp4?nva=20151212020112&amp;token=0b9aa6404430e2d36578d" type="video/mp4" data-res="720">
+32: 
+33: </video>
+
+Backtrace:
+new.scss:33
+D:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/scss/parser.rb:1165:in `expected'
+D:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/scss/parser.rb:1101:in `expected'
+D:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/scss/parser.rb:1096:in `tok!'
+D:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/scss/parser.rb:641:in `block'
+D:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/scss/parser.rb:635:in `ruleset'
+D:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/scss/parser.rb:660:in `block_child'
+D:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/scss/parser.rb:653:in `block_contents'
+D:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/scss/parser.rb:117:in `stylesheet'
+D:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/scss/parser.rb:42:in `parse'
+D:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/engine.rb:393:in `_to_tree'
+D:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/engine.rb:268:in `render'
+D:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/exec/sass_scss.rb:415:in `run'
+D:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/exec/sass_scss.rb:63:in `process_result'
+D:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/exec/base.rb:52:in `parse'
+D:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/exec/base.rb:19:in `parse!'
+D:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/bin/sass:13:in `<top (required)>'
+D:/Program Files (x86)/Prepros/resources/app/ruby/loader.rb:15:in `load'
+D:/Program Files (x86)/Prepros/resources/app/ruby/loader.rb:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"</video>\": expected \"{\", was \"\"\A         on line 33 of new.scss\A \A 28: \A 29: <source src=\"https://udemy-assets-on-demand.udemy.com/2015-01-21_09-34-36-ed910462cc755ea9aba4c704f50eb455/WebHD.mp4?nva=20151212020112&amp;token=0f3847442f863c6e9c58a\" type=\"video/mp4\" data-res=\"360\">\A 30: \A 31: <source src=\"https://udemy-assets-on-demand.udemy.com/2015-01-21_09-34-36-ed910462cc755ea9aba4c704f50eb455/WebHD_720p.mp4?nva=20151212020112&amp;token=0b9aa6404430e2d36578d\" type=\"video/mp4\" data-res=\"720\">\A 32: \A 33: </video>"; }

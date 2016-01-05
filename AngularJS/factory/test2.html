@@ -18,7 +18,14 @@
 
         $scope.ff= function () {
             var movic = $scope.in;
+
             httpFactor.fetchData("http://angularjs.org/greet.php?name=premRatanDhanPayo&callback=JSON_CALLBACK").success(function(response)
+            {
+                console.log(response);
+            });
+            var wurl = 'http://api.openweathermap.org/data/2.5/weather?q=san%20jose,ca&appid=2de143494c0b295cca9337e1e96b00e0';
+
+            httpFactor.getData(wurl).success(function(response)
             {
                 console.log(response);
             });
@@ -31,6 +38,10 @@
         var myfact = {};
         myfact.fetchData = function(aurl,type){
             return $http.jsonp(aurl)
+        };
+
+        myfact.getData = function(aurl,type){
+            return $http.get(aurl)
         };
         return myfact;
     });

@@ -39,16 +39,6 @@ $(document).ready(function(){
                 	   $(table).append(tr);
                 	   $(tr).append("<td>Poster </td> ");
                 	   $(tr).append("<td>"+"<img  src="+ response.movies[0].posters.thumbnail+">"+"</td>");
-                	  
-
-                	 
-
-
-                    		
-
-                    	               	
-                    	 
-                    	  
 
                      },
 

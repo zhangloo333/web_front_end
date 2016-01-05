@@ -1,0 +1,33 @@
+$primary:green;
+$border:2px solid black;
+$color: yellow;
+$color1: red;
+.box{color:$primary;
+border:$border;}
+
+.new{color:$primary;}
+
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { display: inline-block; }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+
+<video id="js-video-player_2546586_0.744938163919337_html5_api" class="vjs-tech" type="text/javascript" preload="auto" data-user-id="9208296" data-videojs-setup="{&quot;language&quot;:&quot;en-us&quot;,&quot;children&quot;:{&quot;controlBar&quot;:{&quot;volumeControl&quot;:false,&quot;captionsButton&quot;:{&quot;title&quot;:&quot;Closed captions&quot;},&quot;muteToggle&quot;:false,&quot;playbackRateMenuButton&quot;:false}},&quot;playbackRates&quot;:[0.5,1,1.25,1.5,2.0],&quot;plugins&quot;:{&quot;udemypatches&quot;:{&quot;inactiveTimeoutTime&quot;:2000},&quot;controlbarspeedcontroller&quot;:{},&quot;resolutionSelector&quot;:{&quot;defaultRes&quot;:&quot;720&quot;},&quot;timer&quot;:{&quot;positionEventName&quot;:&quot;positionHandler_2255710&quot;,&quot;interval&quot;:15,&quot;progressEventName&quot;:&quot;lectureProgress_2255710&quot;},&quot;hotkeys&quot;:{&quot;enableMute&quot;:false}},&quot;duration&quot;:639,&quot;inactivityTimeout&quot;:800,&quot;tracks&quot;:[]}" data-download-urls="{&quot;Video&quot;:[{&quot;label&quot;:&quot;360&quot;,&quot;file&quot;:&quot;https://udemy-assets-on-demand.udemy.com/2015-01-21_09-34-36-ed910462cc755ea9aba4c704f50eb455/WebHD.mp4?nva=20151212020112\u0026filename=03sassmp4.mp4\u0026download=True\u0026token=06358ba206c8422f5ab45&quot;},{&quot;label&quot;:&quot;720&quot;,&quot;file&quot;:&quot;https://udemy-assets-on-demand.udemy.com/2015-01-21_09-34-36-ed910462cc755ea9aba4c704f50eb455/WebHD_720p.mp4?nva=20151212020112\u0026filename=03sassmp4.mp4\u0026download=True\u0026token=0f5c08ef0babcd0b24014&quot;}]}" data-autofocus="true" data-lecture-id="2255710" data-cdn="CF" data-api="/lectures/2255710/progress/" data-progress-event="lectureProgress_2255710" data-completion-event="lectureCompleted_2255710" data-auto-load-next-event="lectureautoloadnext_2255710" autoplay="" src="https://udemy-assets-on-demand.udemy.com/2015-01-21_09-34-36-ed910462cc755ea9aba4c704f50eb455/WebHD_720p.mp4?nva=20151212020112&amp;token=0b9aa6404430e2d36578d" poster="">
+
+<source src="https://udemy-assets-on-demand.udemy.com/2015-01-21_09-34-36-ed910462cc755ea9aba4c704f50eb455/WebHD.mp4?nva=20151212020112&amp;token=0f3847442f863c6e9c58a" type="video/mp4" data-res="360">
+
+<source src="https://udemy-assets-on-demand.udemy.com/2015-01-21_09-34-36-ed910462cc755ea9aba4c704f50eb455/WebHD_720p.mp4?nva=20151212020112&amp;token=0b9aa6404430e2d36578d" type="video/mp4" data-res="720">
+
+</video>

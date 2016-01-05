@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body ng-controller="sampleCtrl">
+<button ng-click="cc()">click</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.js"></script>
+<script>
+
+            $.ajax({
+                type: 'GET',
+                url: 'https://api.datamarket.azure.com/Bing/Search/v1/News?Query=%27san%20jose%27&Market=%27en-US%27&NewsLocationOverride=%27US.CA%27&$format=JSON',
+                headers:{
+                        "Authorization" : "Basic "+":"+'QGqmacNaO6G8a4+e2SY/GGIhc0R4nfqY/glCfkVLc4E'
+                }}).done(function(data){
+                console.log(data);
+            })
+    var testApp= angular.module("myApp",[]);
+    testApp.controller("sampleCtrl",function($scope,demoFac,weather){
+
+        $scope.cc = function () {
+            alert(1);
+            demoFac.fetchUserDetails("http://angularjs.org/greet.php?" +
+                    "name=premRatanDhanPayo&callback=JSON_CALLBACK")
+                    .success(function(response){
+                        console.log(response);
+                    });
+//            var urlw = 'https://api.datamarket.azure.com/Bing/Search/v1/News?Query=%27san%20jose%27&Market=%27en-US%27&NewsLocationOverride=%27US.CA%27&$format=JSON' ;
+//            weather.gfWeather(urlw).success(function (res) {
+//                console.log(res);
+//            });
+//                beforeSend: function(xhr){
+//                    //base64 encoded: ignore:key
+//                    xhr.setRequestHeader('Authorization', 'QGqmacNaO6G8a4+e2SY/GGIhc0R4nfqY/glCfkVLc4E');
+//                },
+//                success: function(data){
+//                    console.log(data);
+//                }
+//            });
+
+        }
+    });
+
+    testApp.factory("demoFac", function($http){
+        var obj = {};
+
+        obj.fetchUserDetails = function(aurl){
+            return $http.jsonp( aurl);
+        }
+        return obj;
+    });
+
+    testApp.factory("weather", function ($http) {
+        var fweather ={};
+
+        fweather.gfWeather = function (aurl) {
+            return $http.get(aurl,{});
+        }
+        return fweather;
+    })
+
+
+</script>
+</body>
+</html>

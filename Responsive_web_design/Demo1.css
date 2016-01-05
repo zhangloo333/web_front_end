@@ -1,0 +1,33 @@
+
+#box1, #sideBar,#wntent{
+    height: 50px;
+    width: 800px;
+}
+@media screen and (max-width: 980px) {
+    #box1{width: 90%;
+        background-color: #24BB46;}
+
+    #sideBar{
+        width: 40%;
+        background-color: red;
+    }
+    #wntent{
+        width: 50%;
+        float: right;
+    }
+}
+
+@media screen and (max-width: 720px) {
+
+    #box1{width: 90%;
+        background-color: #463DD4;}
+
+    #sideBar{
+        width: 40%;
+        background-color: #D8BC27;
+    }
+    #wntent{
+        width: 50%;
+        float: right;
+    }
+}
