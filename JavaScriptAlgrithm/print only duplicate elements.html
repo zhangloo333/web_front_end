@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>print only duplicate elements</title>
+    <style>
+        #wapper{
+            width: 80%;
+            /*height: 500px;*/
+            background:rgb(126,186,40);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wapper">
+        <div>
+            <h3>print only duplicate elements</h3>
+            <textarea id="aa" rows="4" cols="30"></textarea>
+        </div>
+        <div>
+            <h3>Print alternate char of "Hello world"</h3>
+            <p>method 1</p>
+            <textarea id="q2_1" rows="4" cols="30"></textarea>
+        </div>
+        <div>
+            <h3>Print alternate char of "Hello world"</h3>
+            <p>method 2</p>
+            <textarea id="q2_2" rows="4" cols="30"></textarea>
+        </div>
+        <div>
+            <h3>Ask input from user and display how many times the world "in" is in the
+            sentence</h3>
+        </div>
+
+        <div>
+            <h3>Reverse a String "Hello" without using reverse(),split() Method</h3>
+            <textarea id="q2_3" rows="4" cols="30"> this method is method 2</textarea>
+        </div>
+    </div>
+
+    <script>
+        var arr = [1,0,2,1,5,0,7,2];
+        var sarr = arr.sort();
+        var res = [];
+        for(var i= 0; i < arr.length-1;i++)
+        {
+            if(sarr[i+1] == sarr[i])
+            {
+                res.push(sarr[i]);
+            }
+        }
+        console.log(res);
+        document.getElementById("aa").innerHTML = res;
+    </script>
+
+    <script>
+        // method one
+        var str = "Hello world";
+        var Arry = str.split("");
+//        console.log(Arry);
+        for(var i = 0; i <= Arry.length-1;i++)
+        {
+            console.log(Arry[i]);
+            document.getElementById("q2_1").innerHTML += Arry[i]+ "\r";
+        }
+    </script>
+    <script>
+        // method two
+        var str = "Hello world";
+        for(var i=0; i <= str.length-1;i++)
+        {
+            console.log(str.charAt(i));
+            document.getElementById("q2_2").innerHTML += str.charAt(i)+ "\r";
+
+        }
+    </script>
+    <script>
+        // reverse world without use split
+    </script>
+
+</body>
+</html>
