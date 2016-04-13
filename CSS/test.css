@@ -1,0 +1,9 @@
+#wrapper{height:530px; width:800px;border: 3px solid blue;margin:auto;background:#00CC99;}
+.Box1{height:150px; width:120px;border: 3px solid blue;float:left;margin-left:8%;margin-right:0%;margin-top:5%;background:#9900CC;}
+.Box2{height:120px; width:150px;border: 3px solid blue;float:left;margin:30px;margin-left:8%;background:#FF6666}
+.Box3{height:60px; width:300px;border: 3px solid blue;float:left;margin:30px;margin-left:7%;background:#FF0066;}
+.inRowBox{height:35px; width:100px;border: 3px solid blue;margin-left:5%;margin-right:10%;background:#666699;}
+.inColBox{height:50px; width:30px;border: 3px solid blue; margin-left:10%;float:left;background:#CCFF66}
+.inColBox1{height:70px; width:30px;border: 3px solid blue;float:left;background:yellow;}
+ul{list-style:none;margin-left:1px;margin-top:5px;margin-right:10px;}
+.inRec{height:15px; width:15px; border: 3px solid blue;float:left;margin-right:40px;margin-top:3px;background:#00FF66;}

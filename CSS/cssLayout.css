@@ -1,0 +1,9 @@
+#wrapper{height:530px; width:800px;border: 3px solid blue;margin:auto;}
+.Box1{height:150px; width:120px;border: 3px solid blue;float:left;margin-left:8%;}
+.Box2{height:120px; width:150px;border: 3px solid blue;float:left;margin:30px;margin-left:8%;}
+.Box3{height:60px; width:300px;border: 3px solid blue;float:left;margin:30px;margin-left:7%;}
+.inRowBox{height:35px; width:100px;border: 3px solid blue;margin:5%;}
+.inColBox{height:50px; width:30px;border: 3px solid blue;margin:8%; margin-left:10px;float:left;}
+.inColBox1{height:70px; width:30px;border: 3px solid blue;margin:10%; margin-left:20px;float:left;}
+ul{list-style:none;margin-left:1px;margin-top:5px;margin-right:10px;}
+.inRec{height:15px; width:15px; border: 3px solid blue;float:left;margin-right:40px;margin-top:3px;}

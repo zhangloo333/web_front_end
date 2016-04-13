@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p>Name : <input type="text" id="fname"/></p>
+<p>Color :　<input type="text" id="fcolor"/></p>
+<p>Count : <input type="text" id="fcount"/></p>
+<p><button id="btn">ENTER</button></p>
+<div id="output">
+    <p id="o1">Name</p>
+    <p id="o2">Color</p>
+    <p id="o3">Count</p>
+</div>
+<script src="../jquery-1.11.3.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#btn").click(function(){
+            var name = $("#fname").val();
+            var color = $("#fcolor").val();
+            var count = $("#fcount").val();
+           function fruit(){
+
+           };
+            fruit.prototype.name=name;
+            fruit.prototype.color=color;
+            fruit.prototype.count=count;
+
+            var coco = new fruit();
+            $("#o1").html(coco.name);
+            $("#o2").html(coco.color);
+            $("#o3").html(coco.count);
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.js"></script>
+</head>
+<body ng-app="myApp">
+<header>
+    <a href="#/home">HOME</a>
+    <a href="#/accounts">ACCOUNTS</a>
+    <a href="#/contact-us">CONTACT 5US</a>
+</header>
+<div ng-view></div>
+<footer></footer>
+</body>
+<script src="views.js"></script>
+</html>
