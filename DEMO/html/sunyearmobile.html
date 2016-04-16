@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../CSS/sunyearmobile.css">
+<link rel="stylesheet" href="../jQuerytheme/themes/sunyearmobile.min.css" />
+<link rel="stylesheet" href="../jQuerytheme/themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<title>Sunyear Mobile</title>
+</head>
+<body>
+<div data-role="page" id="pageone" data-theme="d">
+<div data-role="header">
+<h1>Sunyear Mobile</h1>
+<div data-role="navbar">
+<ul>
+<li><a href="#pageone" class="ui-btn-active" data-icon="home">Home</a></li>
+<li><a href="#pagetwo" data-transition="slideup" data-icon="grid">Option</a></li>
+<li><a href="#pagethree" data-transition="slidedown" data-icon="search">Search</a></li>
+</ul>
+</div>
+</div>
+<div data-role="main" class="ui-content">
+<a href="#"><img src="../Images/sunyear.png"></a>
+    <div data-role="collapsible">
+      <h1>Menu</h1>
+      <div data-role="collapsible">
+        <h1>Product</h1>
+        <ul>
+        <li><a href="#">Kitchen</a></li>
+        <li><a href="#">Living Room</a></li>
+        <li><a href="#">Shower Rooom</a></li>
+        </ul>
+      </div>
+      <div data-role="collapsible">
+        <h1>Contact Us</h1>
+        <ul>
+        <li><a href="#">Map &amp; Address</a></li>
+        <li><a href="#">Phone</a></li>
+        <li><a href="#">E-mail</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<select name="select-choice-mini" id="select-choice-mini" data-mini="true" data-inline="true">
+    <option value="choose">Choose Language</option>
+    <option value="English">English</option>
+    <option value="Japanese">Japanese</option>
+    <option value="Chinese">Chinese</option>
+</select>
+
+  <div data-role="footer" class="nav-glyphish-example">
+    <div data-role="navbar" class="nav-glyphish-example" data-grid="d">
+    <ul>
+        <li><a href="#" id="chat" data-icon="comment">Chat</a></li>
+        <li><a href="#" id="email" data-icon="mail">Email</a></li>
+        <li><a href="#" id="skull" data-icon="location">Address</a></li>
+        <li><a href="#" id="beer" data-icon="phone">Telephone</a></li>
+        <li><a href="#" id="coffee" data-icon="shop">Shop</a></li>
+    </ul>
+    </div>
+<h1>&copy; Sunyear 2015</h1>
+</div>
+ </div>
+<div data-role="page" id="pagetwo" data-theme="d">
+<div data-role="header">
+<h1>Sunyear Mobile</h1>
+<div data-role="navbar">
+<ul>
+<li><a href="#pageone" data-transition="slidedown" class="ui-btn-active" data-icon="home">Home</a></li>
+<li><a href="#pagetwo" data-icon="grid">Option</a></li>
+<li><a href="#pagethree" data-transition="slideup" data-icon="search">Search</a></li>
+</ul>
+</div>
+</div>
+<div data-role="main" class="ui-content">
+<a href="#"><img src="../Images/sunyear.png"></a>
+   <table id="option" data-role="table" data-mode="columntoggle"  data-column-btn-text="Condition" class="ui-responsive" id="myTable">
+      <thead>
+        <tr>
+          <th data-priority="6">CustomerID</th>
+          <th>CustomerName</th>
+          <th data-priority="1">ContactName</th>
+          <th data-priority="2">Address</th>
+          <th data-priority="3">City</th>
+          <th data-priority="4">PostalCode</th>
+          <th data-priority="5">Country</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Obere Str. 57</td>
+          <td>Berlin</td>
+          <td>12209</td>
+          <td>Germany</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Antonio Moreno Taquería</td>
+          <td>Antonio Moreno</td>
+          <td>Mataderos 2312</td>
+          <td>México D.F.</td>
+          <td>05023</td>
+          <td>Mexico</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Around the Horn</td>
+          <td>Thomas Hardy</td>
+          <td>120 Hanover Sq.</td>
+          <td>London</td>
+          <td>WA1 1DP</td>
+          <td>UK</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Berglunds snabbköp</td>
+          <td>Christina Berglund</td>
+          <td>Berguvsvägen 8</td>
+          <td>Luleå</td>
+          <td>S-958 22</td>
+          <td>Sweden</td>
+        </tr>
+
+      </tbody>
+    </table>
+  
+  </div>
+  <div data-role="footer" class="nav-glyphish-example">
+    <div data-role="navbar" class="nav-glyphish-example" data-grid="d">
+    <ul>
+        <li><a href="#" id="chat" data-icon="comment">Chat</a></li>
+        <li><a href="#" id="email" data-icon="mail">Email</a></li>
+        <li><a href="#" id="skull" data-icon="location">Address</a></li>
+        <li><a href="#" id="beer" data-icon="phone">Telephone</a></li>
+        <li><a href="#" id="coffee" data-icon="shop">Shop</a></li>
+    </ul>
+    </div>
+<h1>&copy; Sunyear 2015</h1>
+</div>
+</div>
+
+
+
+
+<div data-role="page" id="pagethree" data-theme="d">
+<div data-role="header">
+<h1>Sunyear Mobile</h1>
+<div data-role="navbar">
+<ul>
+<li><a href="#pageone" data-transition="slideup" class="ui-btn-active" data-icon="home">Home</a></li>
+<li><a href="#pagetwo" data-transition="slidedown"data-icon="grid">Option</a></li>
+<li><a href="#pagethree" data-icon="search">Search</a></li>
+</ul>
+</div>
+</div>
+<div data-role="main" class="ui-content">
+<a href="#"><img src="../Images/sunyear.png"></a>
+   <div data-role="main" class="ui-content">
+    <form>
+<fieldset data-role="controlgroup">
+    
+    <label for="select-native-2">Menu</label>
+    <select name="select-native-2" id="select-native-5">
+        <option value="#">One</option>
+        <option value="#">Two</option>
+        <option value="#">Three</option>
+    </select>
+    <label for="select-native-6">menu</label>
+    <select name="select-native-6" id="select-native-6">
+        <option value="#">One</option>
+        <option value="#">Two</option>
+        <option value="#">Three</option>
+    </select>
+    <label for="select-native-7">Select C</label>
+    <select name="select-native-7" id="select-native-7">
+        <option value="#">One</option>
+        <option value="#">Two</option>
+        <option value="#">Three</option>
+    </select>
+</fieldset>
+</form>
+  </div> 
+  </div>
+  <div data-role="footer" class="nav-glyphish-example">
+    <div data-role="navbar" class="nav-glyphish-example" data-grid="d">
+    <ul>
+        <li><a href="#" id="chat" data-icon="comment">Chat</a></li>
+        <li><a href="#" id="email" data-icon="mail">Email</a></li>
+        <li><a href="#" id="skull" data-icon="location">Address</a></li>
+        <li><a href="#" id="beer" data-icon="phone">Telephone</a></li>
+        <li><a href="#" id="coffee" data-icon="shop">Shop</a></li>
+    </ul>
+    </div>
+<h1>&copy; Sunyear 2015</h1>
+</div>
+</div>
+</body>
+</html>

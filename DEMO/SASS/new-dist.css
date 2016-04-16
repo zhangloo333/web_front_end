@@ -1,0 +1,11 @@
+nav ul {
+  margin: 20px;
+}
+
+nav li {
+  color: blue;
+}
+
+nav a {
+  background: red;
+}

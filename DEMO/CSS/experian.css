@@ -1,0 +1,60 @@
+#wrapper {
+  height: 900px;
+  width: 98%;
+}
+
+#Logo {
+  position: relative;
+  left: 80%;
+}
+
+#hr {
+  background: red;
+  width: 98%;
+  height: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.adv {
+  float: left;
+  padding: 10px;
+}
+
+p {
+  font-size: 90%;
+  padding-left: 10px;
+}
+
+h3 {
+  margin-top: -3px;
+}
+
+.box {
+  height: 265px;
+  width: 30%;
+  border: 1px solid green;
+  border-radius: 20px;
+  float: left;
+  padding: 10px;
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
+#copyright nav {
+  clear: both;
+  background: #1d8fff;
+  height: 25px;
+  width: 98%;
+  position: relative;
+  top: 10px;
+}
+
+#copyright a {
+  color: white;
+  font-size: 90%;
+}
+
+#copyright span {
+  float: right;
+}

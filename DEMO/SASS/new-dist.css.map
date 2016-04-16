@@ -1,0 +1,1 @@
+{"version":3,"sources":["new.css"],"names":[],"mappings":"AAAA;EACE,aAAa;CACd;;AAED;EACE,YAAY;CACb;;AAED;EACE,gBAAgB;CACjB","file":"new-dist.css","sourcesContent":["nav ul {\n  margin: 20px;\n}\n\nnav li {\n  color: blue;\n}\n\nnav a {\n  background: red;\n}\n"]}
