@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #wapper{
+            width: 80%;
+            height: 685px;
+            /*margin: 50px 10px;*/
+            margin: auto;
+            background: rosybrown;
+        }
+        h1{
+
+        }
+    </style>
+</head>
+<body>
+    <div id="wapper">
+        <h1>How to use Javascript Object</h1>
+        <button>Person object</button>
+        <button>Hospital</button>
+        <button>Employee</button>
+        <button>Flight</button>
+        <div id="showBox"></div>
+    </div>
+<script>
+    var windowWidth = window.innerWidth;
+    var windowHeight = window.innerHeight;
+
+    console.log("windowWidth is "+ windowWidth + "windowHeight is" + windowHeight);
+    function Person(n,a,id,addr)
+    {
+        this.name = n;
+        this.age = a;
+        this.ID = id;
+        this.address = addr;
+        this.getName=function(){
+            document.write("the Person object name is"+ this.name);
+            document.getElementById("showBox").innerText="the Person object name is"+ this.name;
+        }
+        this.getAge=function(){
+            document.write("the Person object age is"+ this.age);
+        }
+        this.getID=function(){
+            document.write("the Person object ID is"+ this.ID);
+        }
+        this.address=function(){
+            document.write("the Person object address is"+ this.addr);
+        }
+
+
+    }
+
+    var p1 = new Person("perter",20,001,"san jose");
+    console.log(p1.name);
+    p1.getName();
+
+</script>
+
+<script>
+    function Hospital(n,ln,sd,boolean)
+    {
+        this.name = n;
+        this.lineNum = ln;
+        this.sickDetail = sd;
+        this.appointment= boolean;
+
+        this.showName = function() {
+            document.write("this is patient name" + this.name);
+        }
+
+        this.showLineNum = function() {
+            document.write("this is patient lineNumber" + this.lineNum);
+        }
+
+        this.sickDetail =function() {
+            document.write("this is patient sickDetail" + this.sickDetail);
+        }
+
+        this.appointment = function() {
+            document.write("this is patient appointment" + this.appointment);
+        }
+    }
+</script>
+
+<script>
+    // function 里面是不能再定义function的.
+    function Employer(na, wh, sk, sal) {
+        this.name = na;
+        this.workHours =wh;
+        this.skill = sk;
+        this.salary = sal;
+        
+        this.showName= function() {
+            document.write("this is Employer name" + this.name);
+        }
+        
+        this.getWorkHours=function(){
+            document.write("this is Employer workHours" + this.workHours);
+        }
+        
+        this.getskill= function(){
+            document.write("this is Employer Skill" + this.skill);
+        }
+        
+        this.showSalary = function () {
+            document.write("this is Employer salary" + this.salary);
+
+        }
+    }
+</script>
+
+<script>
+    function Flight(fnum, dtime, atime, lw){
+        this.FlightNum = fnum;
+        this.departTime = dtime;
+        this.arriveTime = atime;
+        this.localWeather = lw;
+
+        this.getFlightNumber = function()
+        {
+            document.write("this is Filght Number" + this.FlightNum);
+        }
+
+        this.getdepartTime = function()
+        {
+            document.write("this is Filght depart time" + this.departTime);
+        }
+
+        this.getFlightNumber = function()
+        {
+            document.write("this is Filght arrive time" + this.FlightNum);
+        }
+
+        this.getFlightNumber = function()
+        {
+            document.write("this is Filght Number" + this.FlightNum);
+        }
+
+
+    }
+</script>
+
+</body>
+</html>
